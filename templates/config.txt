@@ -1,0 +1,27 @@
+import Env from '@ioc:Adonis/Core/Env'
+import { AlgoliaClientConfig } from '@ioc:Adonis/Addons/Algolia'
+
+const algoliaClientConfig : AlgoliaClientConfig = {
+  /*
+  |--------------------------------------------------------------------------
+  | API key
+  |--------------------------------------------------------------------------
+  |
+  | API key for algolia
+  | for more details about API keys : https://www.algolia.com/doc/guides/security/api-keys
+  |
+  */
+  apiKey: Env.get('ALGOLIA_API_KEY') as string,
+  /*
+  |--------------------------------------------------------------------------
+  | App ID
+  |--------------------------------------------------------------------------
+  |
+  | Algolia's Application ID
+  | Your Application ID is what Algolia uses to identify your app, where all your indices live.
+  |
+  */
+  appId: Env.get('ALGOLIA_APP_ID') as string,
+}
+
+export default algoliaClientConfig;
